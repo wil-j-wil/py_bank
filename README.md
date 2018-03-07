@@ -1,4 +1,4 @@
-### An audio filter bank implementation in Python ###
+### An auditory filter bank implementation in Python ###
 
 Contains implementations of an Equal Rectangular Bandwidth (ERB) filter bank and a linear filter bank.
 
