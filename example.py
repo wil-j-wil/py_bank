@@ -28,7 +28,7 @@ erb_bank.generate_subbands(y)
 erb_subbands = erb_bank.subbands[:, 1:-1]
 
 # calculate the envelopes using the Hilbert transform
-erb_envs = np.absolute(sig.hilbert(erb_subbands))
+erb_envs = np.transpose(np.absolute(sig.hilbert(np.transpose(erb_subbands))))
 
 plt.plot(erb_bank.filters[:, 1:-1])  # plot the filter bank
 plt.show()
@@ -49,7 +49,7 @@ linear_bank.generate_subbands(y)
 linear_subbands = linear_bank.subbands[:, 1:-1]
 
 # calculate the envelopes using the Hilbert transform
-linear_envs = np.absolute(sig.hilbert(linear_subbands))
+linear_envs = np.transpose(np.absolute(sig.hilbert(np.transpose(linear_subbands))))
 
 plt.plot(linear_bank.filters[:, 1:-1])  # plot the filter bank
 plt.show()
