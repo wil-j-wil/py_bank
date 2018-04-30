@@ -34,7 +34,7 @@ class FilterBank(object):
         freqs = np.linspace(0, max_freq, nfreqs + 1)
         if high_lim > fs / 2:
             high_lim = max_freq
-        return high_lim, freqs, nfreqs
+        return high_lim, freqs, int(nfreqs)
 
     def generate_subbands(self, signal):
         if signal.shape[0] == 1:  # turn into column vector
